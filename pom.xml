@@ -24,5 +24,16 @@
 
 	<build>
 		<finalName>dubbo-client</finalName>
+		<resources>
+			<!-- 将所有配置文件都包含到war包classpath下 -->			
+			<resource>
+				<targetPath>${project.build.directory}/classes</targetPath>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
 </project>
