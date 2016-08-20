@@ -17,6 +17,16 @@
 	<dubbo:registry protocol="zookeeper" address="192.168.1.200:2181" />
 	
 	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-	<dubbo:reference id="helloService" interface="com.zheng.service.HelloService"/>
-	<dubbo:reference id="validationService" interface="com.zheng.service.ValidationService"></dubbo:reference>
+	<dubbo:reference id="helloService" interface="com.zheng.service.HelloService" />
+	<dubbo:reference id="validationService" interface="com.zheng.service.ValidationService" />
+	<dubbo:reference id="callbackService" interface="com.zheng.service.CallbackService" />
+	
+	<!-- 事件监听 -->
+	<dubbo:reference id="eventService" interface="com.zheng.service.EventService" version="0.0.1" group="event">
+		<dubbo:method name="get" async="true" onreturn="myEventNotifyService.onreturn" onthrow="myEventNotifyService.onreturn" />
+	</dubbo:reference>
+	
+	
+	
+	
 </beans>
