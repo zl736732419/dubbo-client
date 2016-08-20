@@ -5,5 +5,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/spring-mvc.xml", "/applicationContext.xml"})
+//@ContextConfiguration(locations={"/dubbo-consumer-mock.xml"})
 public class BaseTest {
 }

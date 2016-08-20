@@ -23,7 +23,7 @@ public class ConsumerTest extends BaseTest {
 	private EventService eventService;
 	
 	@Test
-	public void consume() throws Exception {
+	public void hello() throws Exception {
 		String hello = helloService.sayHello("world");
 		System.out.println(hello);
 	}
