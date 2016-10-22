@@ -26,7 +26,7 @@
 		<dubbo:method name="get" async="true" onreturn="myEventNotifyService.onreturn" onthrow="myEventNotifyService.onreturn" />
 	</dubbo:reference>
 	
-	
+	<dubbo:reference id="fileService" interface="com.zheng.service.FileService"></dubbo:reference>
 	
 	
 </beans>
